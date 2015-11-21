@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151121112240) do
+ActiveRecord::Schema.define(version: 20151121145522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "email_templates", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "body"
+    t.string   "subject"
+    t.integer  "user_id"
+  end
+
+  create_table "template_holders", force: :cascade do |t|
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "holder"
+    t.integer  "email_template_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

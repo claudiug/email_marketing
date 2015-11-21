@@ -14,6 +14,7 @@ gem "sinatra-activerecord"
 gem 'pg'
 gem "rake"
 gem 'httparty'
+gem 'annotate'
 
 group :development, :test do
   gem 'spring'
