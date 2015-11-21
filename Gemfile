@@ -13,8 +13,10 @@ gem 'activerecord'
 gem "sinatra-activerecord"
 gem 'pg'
 gem "rake"
+gem 'httparty'
 
 group :development, :test do
+  gem 'spring'
   gem "guard", ">= 2.2.2", :require => false
   gem "guard-minitest", :require => false
   gem "rb-fsevent", :require => false
@@ -22,6 +24,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'webmock'
   gem 'minitest'
   gem 'minitest-line'
   gem 'minitest-reporters'

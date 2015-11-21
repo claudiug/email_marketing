@@ -5,8 +5,6 @@ require 'sinatra/namespace'
 require "sinatra/json"
 require 'oj'
 require 'multi_json'
-
-require 'sqlite3'
 require "sinatra/activerecord"
 
 require_relative 'models/user'
