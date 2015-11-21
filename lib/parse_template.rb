@@ -10,8 +10,8 @@ class ParseTemplate
 
   def parse
     @keys.each do |k, v|
-      @result = @template.gsub!("{#{k}}", v)
+      @template = @template.gsub("{#{k}}", v)
     end
-    @result
+    @template
   end
 end
