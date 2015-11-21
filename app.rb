@@ -11,7 +11,6 @@ require_relative 'models/user'
 require_relative 'models/email_template'
 require_relative 'models/template_holder'
 
-
 class App < Sinatra::Base
 
   configure do

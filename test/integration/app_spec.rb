@@ -12,7 +12,13 @@ describe App do
   describe '/v1/' do
     it 'return all users' do
       get('/v1/')
-      assert last_response.ok?
+      puts last_response.status
+      expect(last_response.status).must_equal 200
+    end
+
+    it 'return status 404 for no user' do
+      get('/v1/users', id: 1)
+
     end
   end
 end
