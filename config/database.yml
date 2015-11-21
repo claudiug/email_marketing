@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: email_marketing_development
+  pool: 5
+  username: ecra
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: email_marketing_test
+  pool: 5
+  username: ecra
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOSTNAME'] %>
+  port: <%= ENV['DB_PORT'] %>

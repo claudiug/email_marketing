@@ -1,0 +1,25 @@
+require 'sinatra/base'
+require "sinatra/reloader"
+require 'sinatra/namespace'
+require "sinatra/json"
+require 'oj'
+require 'multi_json'
+
+require 'sqlite3'
+require 'sequel'
+
+class App < Sinatra::Base
+
+  configure  do
+    register Sinatra::Reloader   # auto reload the app
+    register Sinatra::Namespace  # add namespace
+  end
+
+  namespace '/v1' do #first versions
+
+    get '/' do
+      json(foo: 'bar')
+    end
+  end
+
+end
